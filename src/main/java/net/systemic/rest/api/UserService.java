@@ -33,7 +33,7 @@ public class UserService {
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public @ResponseBody
-    List<?> getUserts() {
+    List<User> getUserts() {
         return getAllUsers();
     }
 
@@ -44,7 +44,7 @@ public class UserService {
      */
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/users", method = RequestMethod.POST)
-    public ResponseEntity<?> update(@RequestBody User user) {
+    public ResponseEntity<User> update(@RequestBody User user) {
         if (user.getFirstName() != null && user.getLastName() != null
                 && user.getDateOfBirth() != null && user.getAge() != null
                 && user.getSalary() != null) {
@@ -61,7 +61,7 @@ public class UserService {
      *
      * @return
      */
-    public List<?> getAllUsers() {
+    public List<User> getAllUsers() {
         Persistence persistObj = new Persistence();
         List<User> userList = new ArrayList<>();
         try {

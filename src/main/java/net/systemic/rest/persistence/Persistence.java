@@ -13,13 +13,7 @@ import org.springframework.jdbc.core.RowMapper;
  */
 public class Persistence {
 
-    private DataSource ds;
-
-    public DataSource getDs() {
-        return ds;
-    }
-    
-    
+    private DataSource ds = new DataSource();
 
     /**
      *
@@ -29,7 +23,7 @@ public class Persistence {
 
         String sql = "SELECT * FROM systemic.users";
 
-        List<User> users = getDs().getJDBCTemplate().query(sql, new RowMapper<User>() {
+        List<User> users = ds.getJDBCTemplate().query(sql, new RowMapper<User>() {
 
             @Override
             public User mapRow(ResultSet result, int rowNum) throws SQLException {
@@ -59,7 +53,7 @@ public class Persistence {
                 + "(first_name, last_name, date_of_birth, age, salary) "
                 + "VALUES (?, ?, ?, ?, ?)";
 
-        getDs().getJDBCTemplate().update(sql, new Object[]{
+        ds.getJDBCTemplate().update(sql, new Object[]{
             user.getFirstName(), user.getLastName(), user.getDateOfBirth(),
             user.getAge(), user.getSalary()});
 
