@@ -1,11 +1,13 @@
 ## syslogic
 
 #TASK
+
 • Create two Http REST endpoints that will allow the user to retrieve and submit new users:
 1. GET endpoint that will retrieve all the users in the database.
 2. POST endpoint that will allow the user to post a new user to the database.
 
 #DEPLOYMENT
+
 Deploying the the application requires the following
 
 - Database script must be run against a MYSQL instance.
