@@ -23,7 +23,7 @@ public class DataSource {
             dataSource.setDriver(new com.mysql.jdbc.Driver());
             dataSource.setUrl("jdbc:mysql://localhost:3306/systemic?useSSL=false");
             dataSource.setUsername("root");
-            dataSource.setPassword("2014menus");
+            dataSource.setPassword("yourpassword");
 
             jdbcTemplate = new JdbcTemplate(dataSource);
         } catch (SQLException ex) {
