@@ -21,3 +21,6 @@ Then run commands in this order from your terminal or command prompt
 4. java -jar SystemicBoot-1.0.jar
 
 use curl or any REST client such as Postman to test functionality (url and server port defaults found in application.properties file )
+
+- http://IPADDRESS:PORT/userservice/users (HTTP POST) to create new user
+- http://IPADDRESS:PORT/userservice/users (HTTP GEt) to get all users
