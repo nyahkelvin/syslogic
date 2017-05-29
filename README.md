@@ -11,7 +11,7 @@ DEPLOYMENT
 Deploying the the application requires the following
 
 - Database script must be run against a MYSQL instance.
-- change database connection URL and login credentials to match your configuration
+- change database connection URL and login credentials in application.properties and DataSource.java to match your database configuration
 
 Then run commands in this order from your terminal or command prompt
 
